@@ -8,24 +8,23 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
 import uk.gov.ipo.fast.feeservice.rest.dao.FeeManagerDao;
-import uk.gov.ipo.fast.feeservice.rest.dao.impl.FeeManagerMemoryDao;
 import uk.gov.ipo.fast.feeservice.rest.exception.NotFoundException;
 import uk.gov.ipo.fast.feeservice.rest.model.ProductFee;
 import uk.gov.ipo.fast.feeservice.rest.service.ProductFeeRequester;
 
+
 @Path("/fee")
+@Service
 public class ProductFeeService implements ProductFeeRequester {
-
-  private FeeManagerDao feeDao = FeeManagerMemoryDao.getInstance();
-
-  public FeeManagerDao getFeeManagerDao() {
-    return feeDao;
-  }
-
-  public void setFeeManagerDao(FeeManagerDao feeDao) {
-    this.feeDao = feeDao;
-  }
+ 
+  @Autowired
+  @Qualifier(value="feeManagerMemoryDao")
+  private FeeManagerDao feeDao;
 
   // This method is called if TEXT_PLAIN is request
   @GET
@@ -33,7 +32,7 @@ public class ProductFeeService implements ProductFeeRequester {
   public String sayPlainTextHello() {
     return "Hello from Jersey";
   }
-
+  
   @Override
   @GET
   @Path("/product/{productCode}")

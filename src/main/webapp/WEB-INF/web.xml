@@ -4,7 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<display-name>Sample rest service using Jersey</display-name>
 	
-	<!--  
 	<context-param>
       <param-name>contextClass</param-name>
       <param-value>
@@ -18,19 +17,8 @@
    <listener>
       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
    </listener>
-	-->
 	
-	<context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/applicationContext*.xml</param-value>
-</context-param>
 
-<listener>
-   <listener-class>
-        org.springframework.web.context.ContextLoaderListener
-   </listener-class>
-</listener> 
-	
 	<servlet>
 		<servlet-name>Fee Service</servlet-name>
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>

@@ -1,9 +1,22 @@
 apply plugin: 'java'
 apply plugin: 'war'
-apply plugin: 'jetty'
+apply plugin: 'tomcat'
 apply plugin: 'eclipse-wtp'
 
 // Just run gradle eclipse to set up the project - dont do gradle eclipseWtp
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-tomcat-plugin:1.2.4'
+    }
+}
+tomcat {
+	// httpPort = 8090
+}
 
 repositories {
 	mavenCentral()
@@ -28,6 +41,17 @@ dependencies {
   compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
    	
   testCompile 'junit:junit-dep:4.11'
+  testCompile 'org.springframework:spring-test:3.2.3.RELEASE'
    	
-   	
+  testCompile 'com.jayway.restassured:rest-assured:2.3.2' 	
+  testCompile 'com.jayway.restassured:modules:2.3.2'
+  testCompile 'com.jayway.restassured:json-schema-validator:2.3.2'
+  
+  def tomcatVersion = '7.0.11'
+  tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+         "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
+  tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
+        exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+  }
+  
 }

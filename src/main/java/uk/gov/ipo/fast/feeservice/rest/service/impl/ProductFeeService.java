@@ -23,7 +23,6 @@ import uk.gov.ipo.fast.feeservice.rest.service.ProductFeeRequester;
 public class ProductFeeService implements ProductFeeRequester {
  
   @Autowired
-  @Qualifier(value="feeManagerMemoryDao")
   private FeeManagerDao feeDao;
 
   // This method is called if TEXT_PLAIN is request

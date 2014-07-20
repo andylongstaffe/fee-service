@@ -13,7 +13,7 @@ import uk.gov.ipo.fast.feeservice.rest.dao.FeeManagerDao;
 import uk.gov.ipo.fast.feeservice.rest.model.ProductFee;
 import uk.gov.ipo.fast.feeservice.rest.model.impl.ProductFeeImpl;
 
-@Repository
+
 public class FeeManagerMemoryDao implements FeeManagerDao {
 
   public static final Logger log = LoggerFactory.getLogger(FeeManagerMemoryDao.class);

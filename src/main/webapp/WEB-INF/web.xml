@@ -12,7 +12,7 @@
    </context-param>
    <context-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>uk.gov.ipo.fast.feeservice.rest.configuration</param-value>
+      <param-value>com.hollywood.feeservice.rest.configuration</param-value>
    </context-param>
    <listener>
       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -24,7 +24,7 @@
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>uk.gov.ipo.fast.feeservice.rest</param-value>
+			<param-value>com.hollywood.feeservice.rest</param-value>
 		</init-param>
 		<init-param>
 			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>

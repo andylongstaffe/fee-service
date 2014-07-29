@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.service;
+package com.hollywood.feeservice.rest.service;
 
 import static com.jayway.restassured.RestAssured.get;
 // import static com.jayway.restassured.module.jsv.JsonSchemaValidator.*;

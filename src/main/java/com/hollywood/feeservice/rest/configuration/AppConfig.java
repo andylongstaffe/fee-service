@@ -11,7 +11,7 @@ import com.hollywood.feeservice.rest.dao.impl.FeeManagerMemoryDao;
 import com.hollywood.feeservice.rest.service.impl.ProductFeeService;
 
 @Configuration
-@ComponentScan(basePackages = {"uk.gov.ipo.fast.feeservice.rest"})
+@ComponentScan(basePackages = {"com.hollywood.feeservice.rest"})
 public class AppConfig {
 
   @Bean

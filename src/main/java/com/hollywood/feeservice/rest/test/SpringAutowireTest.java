@@ -21,8 +21,8 @@ public class SpringAutowireTest {
   
   <context:annotation-config />
 
-  <bean id="myFeeService" class="uk.gov.ipo.fast.feeservice.rest.service.impl.ProductFeeService" />
-  <bean id="feeManagerDao" class="uk.gov.ipo.fast.feeservice.rest.dao.impl.FeeManagerMemoryDao" />
+  <bean id="myFeeService" class="com.hollywood.feeservice.rest.service.impl.ProductFeeService" />
+  <bean id="feeManagerDao" class="com.hollywood.feeservice.rest.dao.impl.FeeManagerMemoryDao" />
   
   */
   

@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.service;
+package com.hollywood.feeservice.rest.service;
 
 import java.util.List;
 

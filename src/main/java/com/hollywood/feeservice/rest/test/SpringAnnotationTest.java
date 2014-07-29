@@ -1,18 +1,18 @@
-package uk.gov.ipo.fast.feeservice.rest.test;
+package com.hollywood.feeservice.rest.test;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import uk.gov.ipo.fast.feeservice.rest.dao.FeeManagerDao;
-import uk.gov.ipo.fast.feeservice.rest.service.impl.ProductFeeService;
+import com.hollywood.feeservice.rest.dao.FeeManagerDao;
+import com.hollywood.feeservice.rest.service.impl.ProductFeeService;
 
-public class SpringAutowireTest {
+public class SpringAnnotationTest {
 
   public static void main(String[] args) {
       ApplicationContext context = new ClassPathXmlApplicationContext("WEB-INF/applicationContext.xml");
       // FeeManagerDao dao = (FeeManagerDao) context.getBean("FeeInMemoryDao");
       // System.out.println(dao.getProductFee("a1f"));
-      ProductFeeService service = (ProductFeeService) context.getBean("myFeeService");
+      ProductFeeService service = (ProductFeeService) context.getBean("fs");
       System.out.println(service.getProductFee("a1f"));
 
   }

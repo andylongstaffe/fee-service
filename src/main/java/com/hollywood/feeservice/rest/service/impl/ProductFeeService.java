@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.service.impl;
+package com.hollywood.feeservice.rest.service.impl;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import uk.gov.ipo.fast.feeservice.rest.dao.FeeManagerDao;
-import uk.gov.ipo.fast.feeservice.rest.exception.NotFoundException;
-import uk.gov.ipo.fast.feeservice.rest.model.ProductFee;
-import uk.gov.ipo.fast.feeservice.rest.service.ProductFeeRequester;
+import com.hollywood.feeservice.rest.dao.FeeManagerDao;
+import com.hollywood.feeservice.rest.exception.NotFoundException;
+import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.service.ProductFeeRequester;
 
 
 @Path("/fee")

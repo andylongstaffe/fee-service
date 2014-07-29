@@ -1,8 +1,8 @@
-package uk.gov.ipo.fast.feeservice.rest.dao;
+package com.hollywood.feeservice.rest.dao;
 
 import java.util.List;
 
-import uk.gov.ipo.fast.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.ProductFee;
 
 public interface FeeManagerDao
 {

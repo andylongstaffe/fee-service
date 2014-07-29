@@ -1,8 +1,8 @@
-package uk.gov.ipo.fast.feeservice.rest.service;
+package com.hollywood.feeservice.rest.service;
 
 import java.util.List;
 
-import uk.gov.ipo.fast.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.ProductFee;
 
 public interface ProductFeeManager {
 

@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.dao.impl;
+package com.hollywood.feeservice.rest.dao.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,9 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import uk.gov.ipo.fast.feeservice.rest.dao.FeeManagerDao;
-import uk.gov.ipo.fast.feeservice.rest.model.ProductFee;
-import uk.gov.ipo.fast.feeservice.rest.model.impl.ProductFeeImpl;
+import com.hollywood.feeservice.rest.dao.FeeManagerDao;
+import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.impl.ProductFeeImpl;
 
 
 public class FeeManagerMemoryDao implements FeeManagerDao {

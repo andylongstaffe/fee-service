@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.model;
+package com.hollywood.feeservice.rest.model;
 
 public interface ProductFee {
 

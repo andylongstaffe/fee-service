@@ -1,6 +1,6 @@
-package uk.gov.ipo.fast.feeservice.rest.model.impl;
+package com.hollywood.feeservice.rest.model.impl;
 
-import uk.gov.ipo.fast.feeservice.rest.model.Price;
+import com.hollywood.feeservice.rest.model.Price;
 
 public class PriceImpl implements Price {
 

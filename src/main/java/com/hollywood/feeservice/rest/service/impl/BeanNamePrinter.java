@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.service.impl;
+package com.hollywood.feeservice.rest.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

@@ -1,4 +1,4 @@
-package uk.gov.ipo.fast.feeservice.rest.exception;
+package com.hollywood.feeservice.rest.exception;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;

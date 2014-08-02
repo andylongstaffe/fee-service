@@ -2,17 +2,17 @@ package com.hollywood.feeservice.rest.dao;
 
 import java.util.List;
 
-import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.Fee;
 
 public interface FeeManagerDao
 {
-	public ProductFee getProductFee(String productCode);
+	public Fee getProductFee(String productCode);
 	
-	public List<ProductFee> getAllProductFees();
+	public List<Fee> getAllProductFees();
 	
-	public void insertProductFee(ProductFee fee);
+	public void insertProductFee(Fee fee);
 	
-	public void updateProductFee(ProductFee fee);
+	public void updateProductFee(Fee fee);
 	
 	public void deleteProductFee(String productCode);
 }

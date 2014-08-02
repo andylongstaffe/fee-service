@@ -1,10 +1,8 @@
 package com.hollywood.feeservice.rest.model;
 
-public interface ProductFee {
+public interface Fee {
 
   String getProductCode();
-  
-  String getProductGroup();
   
   Price getPrice();
   

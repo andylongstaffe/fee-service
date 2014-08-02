@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import com.hollywood.feeservice.rest.dao.FeeManagerDao;
-import com.hollywood.feeservice.rest.model.ProductFee;
-import com.hollywood.feeservice.rest.model.impl.ProductFeeImpl;
+import com.hollywood.feeservice.rest.model.Fee;
+import com.hollywood.feeservice.rest.model.impl.ProductFee;
 
 
 public class FeeManagerMemoryDao implements FeeManagerDao {
@@ -19,26 +19,26 @@ public class FeeManagerMemoryDao implements FeeManagerDao {
   public static final Logger log = LoggerFactory.getLogger(FeeManagerMemoryDao.class);
 
   public FeeManagerMemoryDao() {    
-    productFees.put("a1f", new ProductFeeImpl("a1f", "general", "75.00", "0.00", "gbp"));
-    productFees.put("p09a", new ProductFeeImpl("p09a", "patents", "150.00", "0.00", "gbp"));
-    productFees.put("cit", new ProductFeeImpl("cit", "general", "10.00", "0.00", "gbp"));
+    productFees.put("a1f", new ProductFee("a1f", "75.00", "0.00", "gbp"));
+    productFees.put("p09a", new ProductFee("p09a", "150.00", "0.00", "gbp"));
+    productFees.put("cit", new ProductFee("cit",  "10.00", "0.00", "gbp"));
   }
 
-  Map<String, ProductFee> productFees = new HashMap<String, ProductFee>();
+  Map<String, Fee> productFees = new HashMap<String, Fee>();
   
   @Override
-  public ProductFee getProductFee(String productCode) {
+  public Fee getProductFee(String productCode) {
     log.debug("Fetching product fee with product code = " + productCode);
     return productFees.get(productCode);
   }
 
   @Override
-  public List<ProductFee> getAllProductFees() {
-    return new ArrayList<ProductFee>(productFees.values());
+  public List<Fee> getAllProductFees() {
+    return new ArrayList<Fee>(productFees.values());
   }
 
   @Override
-  public void insertProductFee(ProductFee productFee) {
+  public void insertProductFee(Fee productFee) {
     productFees.put(productFee.getProductCode(), productFee);
     log.info("Product fee added " + productFee);
     log.debug("Current users:");
@@ -49,7 +49,7 @@ public class FeeManagerMemoryDao implements FeeManagerDao {
   }
 
   @Override
-  public void updateProductFee(ProductFee productFee) {
+  public void updateProductFee(Fee productFee) {
     // TODO Auto-generated method stub
   }
 

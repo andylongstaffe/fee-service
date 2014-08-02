@@ -1,28 +1,21 @@
 package com.hollywood.feeservice.rest.model.impl;
 
 import com.hollywood.feeservice.rest.model.Price;
-import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.Fee;
 
-public class ProductFeeImpl implements ProductFee {
+public class ProductFee implements Fee {
 
   private final String code;
-  private final String group;
   private final Price price;
   
-  public ProductFeeImpl(String code, String group, String amount, String vatRate, String currency) {
+  public ProductFee(String code, String amount, String vatRate, String currency) {
     this.code = code;
-    this.group = group;
     this.price = new PriceImpl(amount, vatRate, currency);
   }
   
   @Override
   public String getProductCode() {
     return code;
-  }
-
-  @Override
-  public String getProductGroup() {
-    return group;
   }
 
   @Override

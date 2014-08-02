@@ -3,14 +3,14 @@ package com.hollywood.feeservice.rest.model;
 
 public class ProductFeeRequest {
 	
-  public ProductFee getProductFee() {
+  public Fee getProductFee() {
     return productFee;
   }
 
-  public void setProductFee(ProductFee productFee) {
+  public void setProductFee(Fee productFee) {
     this.productFee = productFee;
   }
 
-  private ProductFee productFee;
+  private Fee productFee;
 
 }

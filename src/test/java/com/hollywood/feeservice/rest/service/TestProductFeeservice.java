@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.hollywood.feeservice.rest.configuration.AppConfig;
-import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.Fee;
 import com.hollywood.feeservice.rest.service.impl.ProductFeeService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -22,7 +22,7 @@ public class TestProductFeeservice {
 
   @Test
   public void thatAllProductFeesAreReturned() {
-    List<ProductFee> fees = service.getAllProductFees();
+    List<Fee> fees = service.getAllProductFees();
     Assert.assertEquals(3, fees.size());
   }
 

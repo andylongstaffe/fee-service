@@ -1,9 +1,9 @@
 package com.hollywood.feeservice.rest.service;
 
-import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.Fee;
 
 public interface ProductFeeRequester {
 
-  ProductFee getProductFee(String productCode);
+  Fee getProductFee(String productCode);
   
 }

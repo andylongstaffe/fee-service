@@ -2,17 +2,17 @@ package com.hollywood.feeservice.rest.service;
 
 import java.util.List;
 
-import com.hollywood.feeservice.rest.model.ProductFee;
+import com.hollywood.feeservice.rest.model.Fee;
 
 public interface ProductFeeManager {
 
-	public ProductFee getProductFee(String productCode);
+	public Fee getProductFee(String productCode);
 	
-	public List<ProductFee> getAllProductFees();
+	public List<Fee> getAllProductFees();
 	
-	public boolean createProductFee(ProductFee fee);
+	public boolean createProductFee(Fee fee);
 	
-	public boolean updateProductFee(String productCode, ProductFee fee);
+	public boolean updateProductFee(String productCode, Fee fee);
 	
 	public boolean deleteProductFee(String productCode);
 	

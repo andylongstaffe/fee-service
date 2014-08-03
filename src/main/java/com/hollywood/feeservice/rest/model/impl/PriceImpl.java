@@ -29,4 +29,12 @@ public class PriceImpl implements Price {
     return currency;
   }
 
+  @Override
+  public String toString() {
+    return "PriceImpl [amount=" + amount + ", vatRate=" + vatRate
+        + ", currency=" + currency + "]";
+  }
+  
+  
+
 }
